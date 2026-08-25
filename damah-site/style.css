@@ -24,6 +24,8 @@ body {
   font-size: 11px;
   font-weight: 400;
   letter-spacing: -0.01em;
+
+  overflow-x: hidden;
 }
 
 a {
@@ -88,10 +90,8 @@ nav a.active {
   width: 100%;
   min-height: 100vh;
 
-  padding:
-    8vh
-    24px
-    60px;
+  margin: 0;
+  padding: 8vh 0 60px;
 }
 
 
@@ -100,25 +100,26 @@ nav a.active {
 ========================= */
 
 .home-visual {
+  position: relative;
+
   width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .home-visual img {
   display: block;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 
   width: 42vw;
   max-width: 600px;
 
   height: auto;
 
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
 
   object-fit: contain;
 }
@@ -132,10 +133,7 @@ nav a.active {
   width: 42vw;
   max-width: 600px;
 
-  margin:
-    20px
-    auto
-    0;
+  margin: 20px auto 0;
 
   text-align: center;
 
@@ -158,18 +156,13 @@ nav a.active {
   width: 42vw;
   max-width: 600px;
 
-  margin:
-    38px
-    auto
-    0;
+  margin: 38px auto 0;
 }
 
 .info-row {
   display: grid;
 
-  grid-template-columns:
-    72px
-    1fr;
+  grid-template-columns: 72px 1fr;
 
   margin-bottom: 5px;
 
@@ -214,18 +207,12 @@ nav a.active {
   }
 
   .home-page {
-    padding:
-      90px
-      14px
-      40px;
+    padding: 90px 0 40px;
   }
 
   .home-visual img {
     width: 82vw;
     max-width: none;
-
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .home-caption {
@@ -245,9 +232,7 @@ nav a.active {
   }
 
   .info-row {
-    grid-template-columns:
-      58px
-      1fr;
+    grid-template-columns: 58px 1fr;
 
     margin-bottom: 8px;
   }
@@ -256,5 +241,4 @@ nav a.active {
   .info-content {
     font-size: 8px;
   }
-
 }
