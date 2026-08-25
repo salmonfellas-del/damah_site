@@ -12,7 +12,6 @@ html {
 
 body {
   margin: 0;
-
   background: #ffffff;
   color: #000000;
 
@@ -24,7 +23,6 @@ body {
 
   font-size: 11px;
   font-weight: 400;
-
   letter-spacing: -0.01em;
 }
 
@@ -43,75 +41,57 @@ a:hover {
 ========================= */
 
 .site-header {
-
   position: fixed;
-
   top: 0;
   left: 0;
 
   width: 100%;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 
-  padding: 20px 24px;
+  padding: 18px 22px;
 
   z-index: 100;
 
   background: transparent;
 }
 
-
 .brand {
-
   font-size: 10px;
-
   font-weight: 500;
-
   letter-spacing: 0.08em;
 }
 
-
 nav {
-
   display: flex;
-
-  gap: 18px;
+  gap: 16px;
 }
 
-
 nav a {
-
   font-size: 9px;
-
   letter-spacing: 0.04em;
-
   opacity: 0.35;
 }
 
-
 nav a.active {
-
   opacity: 1;
 }
 
 
 /* =========================
-   HOME
+   HOME PAGE
 ========================= */
 
 .home-page {
-
   width: 100%;
-
   min-height: 100vh;
 
   padding:
-
-    11vh
+    8vh
     24px
-    50px;
+    60px;
 }
 
 
@@ -120,24 +100,25 @@ nav a.active {
 ========================= */
 
 .home-visual {
-
   width: 100%;
 
   display: flex;
-
   justify-content: center;
+  align-items: center;
+
+  text-align: center;
 }
 
-
 .home-visual img {
-
   display: block;
 
-  width: min(62vw, 900px);
+  width: 42vw;
+  max-width: 600px;
 
   height: auto;
 
-  max-height: 62vh;
+  margin-left: auto;
+  margin-right: auto;
 
   object-fit: contain;
 }
@@ -148,54 +129,46 @@ nav a.active {
 ========================= */
 
 .home-caption {
-
-  width: min(62vw, 900px);
+  width: 42vw;
+  max-width: 600px;
 
   margin:
-
-    22px
+    20px
     auto
     0;
 
   text-align: center;
 
   font-size: 13px;
-
   line-height: 1.5;
 
   letter-spacing: -0.02em;
 }
 
-
 .home-caption strong {
-
   font-weight: 700;
 }
 
 
 /* =========================
-   INFO
+   INFORMATION
 ========================= */
 
 .home-info {
-
-  width: min(62vw, 900px);
+  width: 42vw;
+  max-width: 600px;
 
   margin:
-
-    42px
+    38px
     auto
     0;
 }
 
-
 .info-row {
-
   display: grid;
 
   grid-template-columns:
-
-    74px
+    72px
     1fr;
 
   margin-bottom: 5px;
@@ -203,25 +176,17 @@ nav a.active {
   line-height: 1.5;
 }
 
-
 .info-label {
-
   font-size: 9px;
-
   letter-spacing: 0.04em;
 }
 
-
 .info-content {
-
   font-size: 9px;
 }
 
-
 .separator {
-
   display: inline-block;
-
   margin: 0 5px;
 }
 
@@ -233,64 +198,62 @@ nav a.active {
 @media (max-width: 700px) {
 
   .site-header {
-
-    padding:
-
-      14px
-      14px;
+    padding: 14px;
   }
 
+  .brand {
+    font-size: 9px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 8px;
+  }
 
   .home-page {
-
     padding:
-
       90px
       14px
-      35px;
+      40px;
   }
-
 
   .home-visual img {
-
     width: 82vw;
+    max-width: none;
 
-    max-height: 58vh;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-
   .home-caption {
-
     width: 82vw;
+    max-width: none;
 
     margin-top: 17px;
 
     font-size: 12px;
   }
 
-
   .home-info {
-
     width: 82vw;
+    max-width: none;
 
-    margin-top: 34px;
+    margin-top: 32px;
   }
 
-
   .info-row {
-
     grid-template-columns:
-
-      60px
+      58px
       1fr;
 
     margin-bottom: 8px;
   }
 
-
   .info-label,
   .info-content {
-
     font-size: 8px;
   }
 
