@@ -244,3 +244,28 @@ nav a.active {
     font-size: 8px;
   }
 }
+.business-info {
+  width: 100%;
+  padding: 60px 24px 24px;
+
+  text-align: center;
+
+  font-size: 8px;
+  line-height: 1.7;
+  letter-spacing: 0;
+
+  color: rgba(0, 0, 0, 0.28);
+}
+
+.business-info p {
+  margin: 0;
+}
+
+.business-info a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.business-info a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
