@@ -1,372 +1,96 @@
 /* =========================
-   RESET
-========================= */
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-
-  background: #ffffff;
-  color: #000000;
-
-  font-family:
-    Arial,
-    "Helvetica Neue",
-    Helvetica,
-    sans-serif;
-
-  font-size: 11px;
-  font-weight: 400;
-
-  letter-spacing: -0.01em;
-
-  overflow-x: hidden;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.5;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-.site-header {
-  position: fixed;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 18px 20px;
-
-  z-index: 100;
-
-  background: #ffffff;
-}
-
-.site-header nav {
-  display: flex;
-  gap: 24px;
-}
-
-.site-header nav a {
-  font-size: 9px;
-  font-weight: 400;
-
-  letter-spacing: 0.05em;
-
-  opacity: 0.35;
-}
-
-.site-header nav a.active {
-  opacity: 1;
-}
-
-
-/* =========================
-   HOME
-========================= */
-
-.home-page {
-  width: 100%;
-  min-height: 100vh;
-
-  padding:
-    10vh
-    0
-    60px;
-}
-
-
-/* =========================
-   HOME IMAGE
-========================= */
-
-.home-visual {
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-visual img {
-  display: block;
-
-  width: 40vw;
-  max-width: 580px;
-
-  height: auto;
-
-  margin: 0 auto;
-
-  object-fit: contain;
-}
-
-
-/* =========================
-   HOME CAPTION
-========================= */
-
-.home-caption {
-  width: 40vw;
-  max-width: 580px;
-
-  margin:
-    22px
-    auto
-    0;
-
-  text-align: center;
-
-  font-family: "SUIT", sans-serif;
-
-  font-size: 13px;
-  font-weight: 400;
-
-  line-height: 1.5;
-
-  letter-spacing: -0.025em;
-}
-
-.home-caption strong {
-  font-weight: 700;
-}
-
-
-/* =========================
-   HOME INFO
-========================= */
-
-.home-info {
-  width: 40vw;
-  max-width: 580px;
-
-  margin:
-    38px
-    auto
-    0;
-}
-
-.info-row {
-  display: grid;
-
-  grid-template-columns:
-    72px
-    1fr;
-
-  margin-bottom: 5px;
-
-  line-height: 1.5;
-}
-
-.info-label {
-  font-size: 9px;
-  letter-spacing: 0.04em;
-}
-
-.info-content {
-  font-size: 9px;
-}
-
-.separator {
-  display: inline-block;
-
-  margin:
-    0
-    5px;
-}
-
-
-/* =========================
-   ABOUT
+   ABOUT / PRICE GUIDE
 ========================= */
 
 .about-page {
   width: 100%;
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding:
-    100px
-    24px
-    100px;
+  padding: 120px 24px 100px;
 }
 
-.about-content {
-  width: min(42vw, 600px);
-
-  text-align: center;
+.about-product {
+  width: min(42vw, 620px);
+  margin: 0 auto;
 }
 
-.about-title {
-  margin:
-    0
-    0
-    40px;
+.about-product h1 {
+  margin: 0 0 18px;
 
-  font-size: 9px;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
 }
 
-.about-copy {
-  margin:
-    0
-    0
-    26px;
+.about-tagline {
+  margin: 0 0 70px;
 
   font-family: "SUIT", sans-serif;
-
-  font-size: 18px;
-  font-weight: 400;
-
-  line-height: 1.5;
-
-  letter-spacing: -0.03em;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
-.about-copy strong {
-  font-weight: 700;
+.about-section {
+  margin-bottom: 58px;
 }
 
-.about-description {
+.about-section h2 {
+  margin: 0 0 18px;
+
+  font-family: "SUIT", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+}
+
+.about-section ul {
   margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.about-section li,
+.about-section p {
+  margin: 0 0 7px;
 
   font-family: "SUIT", sans-serif;
-
   font-size: 10px;
+  font-weight: 400;
 
   line-height: 1.8;
 
-  color: rgba(0, 0, 0, 0.55);
+  letter-spacing: -0.02em;
+}
+
+.about-section li::before {
+  content: "- ";
+}
+
+.note {
+  color: rgba(0, 0, 0, 0.48);
+}
+
+.about-divider {
+  margin: 65px 0;
+
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.custom-section {
+  margin-top: 90px;
+}
+
+.custom-section h1 {
+  margin-bottom: 22px;
 }
 
 
-/* =========================
-   BUSINESS FOOTER
-========================= */
-
-.business-info {
-  width: 100%;
-
-  padding:
-    60px
-    24px
-    24px;
-
-  text-align: center;
-
-  font-size: 8px;
-
-  line-height: 1.7;
-
-  letter-spacing: 0;
-
-  color: rgba(0, 0, 0, 0.25);
-}
-
-.business-info p {
-  margin: 0;
-}
-
-.business-info a {
-  color: inherit;
-}
-
-.business-info a:hover {
-  color: rgba(0, 0, 0, 0.55);
-}
-
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
-
-  .site-header {
-    padding:
-      14px
-      14px;
-  }
-
-  .site-header nav {
-    gap: 20px;
-  }
-
-  .site-header nav a {
-    font-size: 8px;
-  }
-
-
-  /* HOME */
-
-  .home-page {
-    padding:
-      90px
-      0
-      40px;
-  }
-
-  .home-visual img {
-    width: 82vw;
-    max-width: none;
-  }
-
-  .home-caption {
-    width: 82vw;
-    max-width: none;
-
-    margin-top: 18px;
-
-    font-size: 12px;
-  }
-
-  .home-info {
-    width: 82vw;
-    max-width: none;
-
-    margin-top: 32px;
-  }
-
-  .info-row {
-    grid-template-columns:
-      58px
-      1fr;
-
-    margin-bottom: 8px;
-  }
-
-  .info-label,
-  .info-content {
-    font-size: 8px;
-  }
-
-
-  /* ABOUT */
 
   .about-page {
     padding:
@@ -375,32 +99,34 @@ a:hover {
       70px;
   }
 
-  .about-content {
+  .about-product {
     width: 82vw;
   }
 
-  .about-title {
-    margin-bottom: 30px;
+  .about-product h1 {
+    font-size: 11px;
   }
 
-  .about-copy {
-    font-size: 16px;
+  .about-tagline {
+    margin-bottom: 50px;
+    font-size: 12px;
   }
 
-  .about-description {
+  .about-section {
+    margin-bottom: 45px;
+  }
+
+  .about-section h2 {
+    font-size: 10px;
+  }
+
+  .about-section li,
+  .about-section p {
     font-size: 9px;
   }
 
-
-  /* FOOTER */
-
-  .business-info {
-    padding:
-      45px
-      14px
-      20px;
-
-    font-size: 7px;
+  .custom-section {
+    margin-top: 70px;
   }
 
 }
