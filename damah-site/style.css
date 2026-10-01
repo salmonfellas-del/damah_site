@@ -239,7 +239,7 @@ a:hover {
   margin:
     0
     0
-    18px;
+    23px;
 
   font-family:
     Arial,
@@ -247,10 +247,10 @@ a:hover {
     Helvetica,
     sans-serif;
 
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
 
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .about-content h2 {
