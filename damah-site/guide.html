@@ -12,716 +12,772 @@
   />
 
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* =========================
+       GUIDE PAGE ONLY
+    ========================= */
+
+    .guide-page-v2 {
+      width: 100%;
+      padding: 120px 40px 120px;
+    }
+
+    .guide-layout {
+      display: grid;
+      grid-template-columns: 420px minmax(620px, 1fr);
+      gap: 80px;
+      align-items: start;
+    }
+
+    .guide-left {
+      position: sticky;
+      top: 95px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 36px;
+      align-items: start;
+    }
+
+    .guide-left-meta {
+      min-width: 0;
+    }
+
+    .guide-kicker {
+      margin: 0;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+
+    .guide-desc {
+      margin: 28px 0 0;
+      font-family: "SUIT", sans-serif;
+      font-size: 12px;
+      line-height: 1.75;
+    }
+
+    .guide-index {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      min-width: 0;
+    }
+
+    .guide-index a {
+      text-decoration: none;
+      color: inherit;
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 10px;
+      opacity: 0.35;
+      transition: opacity 0.2s ease;
+    }
+
+    .guide-index a:hover {
+      opacity: 1;
+    }
+
+    .guide-index a.is-active {
+      opacity: 1;
+    }
+
+    .guide-index-no {
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .guide-index-text strong {
+      display: block;
+      font-family: "SUIT", sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .guide-index-text small {
+      display: block;
+      margin-top: 2px;
+      font-family: "SUIT", sans-serif;
+      font-size: 9px;
+      line-height: 1.5;
+      color: rgba(0, 0, 0, 0.42);
+    }
+
+    .guide-right {
+      width: 100%;
+      max-width: 760px;
+    }
+
+    .guide-block {
+      margin-bottom: 110px;
+      scroll-margin-top: 90px;
+    }
+
+    .guide-block-title {
+      margin: 0 0 28px;
+      font-family: "SUIT", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .guide-block-title span {
+      margin-left: 6px;
+      font-family: Arial, "Helvetica Neue", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: rgba(0, 0, 0, 0.28);
+    }
+
+    .guide-subtitle {
+      margin: 0 0 18px;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: rgba(0, 0, 0, 0.42);
+    }
+
+    .guide-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.1);
+      margin: 30px 0;
+    }
+
+    .guide-small-note {
+      margin: 20px 0 0;
+      font-family: "SUIT", sans-serif;
+      font-size: 9px;
+      line-height: 1.8;
+      color: rgba(0, 0, 0, 0.45);
+    }
+
+    /* FLOW */
+
+    .flow-table {
+      width: 100%;
+    }
+
+    .flow-row {
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .flow-day {
+      font-size: 10px;
+      color: rgba(0, 0, 0, 0.45);
+      letter-spacing: 0.03em;
+    }
+
+    .flow-text {
+      font-family: "SUIT", sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.65;
+    }
+
+    /* FAQ TABS */
+
+    .faq-tabs {
+      display: flex;
+      gap: 28px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.72);
+      padding-bottom: 12px;
+      margin-bottom: 0;
+    }
+
+    .faq-tab {
+      appearance: none;
+      border: 0;
+      background: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      font-family: Arial, "Helvetica Neue", sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.07em;
+      color: rgba(0, 0, 0, 0.28);
+    }
+
+    .faq-tab.active {
+      color: #000;
+    }
+
+    .faq-panel {
+      display: none;
+    }
+
+    .faq-panel.active {
+      display: block;
+    }
+
+    /* ACCORDION COMMON */
+
+    .guide-accordion,
+    .policy-accordion {
+      margin-top: 0;
+    }
+
+    .guide-accordion details,
+    .policy-accordion details {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .guide-accordion summary,
+    .policy-accordion summary {
+      list-style: none;
+      position: relative;
+      cursor: pointer;
+      padding: 17px 28px 17px 0;
+      font-family: "SUIT", sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.65;
+    }
+
+    .guide-accordion summary::-webkit-details-marker,
+    .policy-accordion summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .guide-accordion summary::after,
+    .policy-accordion summary::after {
+      content: "+";
+      position: absolute;
+      top: 17px;
+      right: 0;
+      font-family: Arial, "Helvetica Neue", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    .guide-accordion details[open] summary::after,
+    .policy-accordion details[open] summary::after {
+      content: "−";
+    }
+
+    .guide-accordion .answer,
+    .policy-accordion .answer {
+      padding: 0 28px 18px 0;
+      font-family: "SUIT", sans-serif;
+      font-size: 10px;
+      line-height: 1.85;
+      color: rgba(0, 0, 0, 0.55);
+    }
+
+    /* POLICY */
+
+    .policy-accordion {
+      border-top: 1px solid rgba(0, 0, 0, 0.72);
+    }
+
+    .policy-accordion summary {
+      display: grid;
+      grid-template-columns: 102px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .policy-cat {
+      font-family: Arial, "Helvetica Neue", sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: rgba(0, 0, 0, 0.38);
+      font-weight: 400;
+    }
+
+    .policy-title {
+      font-family: "SUIT", sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.65;
+      color: #000;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 1100px) {
+      .guide-layout {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .guide-left {
+        position: static;
+        grid-template-columns: 1fr;
+        row-gap: 32px;
+      }
+
+      .guide-right {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .guide-page-v2 {
+        padding: 90px 14px 70px;
+      }
+
+      .guide-kicker {
+        font-size: 9px;
+      }
+
+      .guide-desc {
+        font-size: 11px;
+        margin-top: 20px;
+      }
+
+      .guide-index {
+        gap: 18px;
+      }
+
+      .guide-index-text strong {
+        font-size: 10px;
+      }
+
+      .guide-index-text small {
+        font-size: 8px;
+      }
+
+      .guide-block {
+        margin-bottom: 80px;
+      }
+
+      .guide-block-title {
+        font-size: 11px;
+      }
+
+      .guide-block-title span {
+        font-size: 11px;
+      }
+
+      .flow-row {
+        grid-template-columns: 74px 1fr;
+        gap: 10px;
+      }
+
+      .flow-day {
+        font-size: 9px;
+      }
+
+      .flow-text {
+        font-size: 10px;
+      }
+
+      .faq-tabs {
+        gap: 18px;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .faq-tab {
+        font-size: 9px;
+      }
+
+      .guide-accordion summary,
+      .policy-accordion summary {
+        font-size: 10px;
+      }
+
+      .policy-accordion summary {
+        grid-template-columns: 82px 1fr;
+        gap: 12px;
+      }
+
+      .policy-cat {
+        font-size: 8px;
+      }
+
+      .guide-accordion .answer,
+      .policy-accordion .answer {
+        font-size: 9px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <nav>
       <a href="index.html">DAMAH</a>
       <a href="product.html">PRODUCT</a>
       <a class="active" href="guide.html">GUIDE</a>
-
-      <a
-        href="YOUR_KAKAO_LINK"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        RESERVE
-      </a>
+      <a href="YOUR_KAKAO_LINK" target="_blank" rel="noopener noreferrer">RESERVE</a>
     </nav>
   </header>
 
+  <main class="guide-page-v2">
+    <div class="guide-layout">
 
-  <!-- GUIDE -->
-  <main class="guide-page">
+      <aside class="guide-left">
+        <div class="guide-left-meta">
+          <p class="guide-kicker">GUIDE</p>
 
-
-    <!-- LEFT -->
-    <aside class="guide-sidebar">
-
-      <div class="guide-sidebar-title">
-        GUIDE
-      </div>
-
-      <p class="guide-sidebar-description">
-        촬영일부터 제작물 수령까지<br>
-        약 4–5개월이 소요됩니다.
-      </p>
-
-
-      <nav class="guide-index">
-
-        <a href="#flow">
-          <span class="guide-number">01</span>
-
-          <span>
-            <strong>진행 일정</strong>
-            <small>촬영 준비부터 제작물 배송까지</small>
-          </span>
-        </a>
-
-
-        <a href="#faq">
-          <span class="guide-number">02</span>
-
-          <span>
-            <strong>자주 묻는 질문</strong>
-            <small>예약 · 촬영 준비 · 촬영 후</small>
-          </span>
-        </a>
-
-
-        <a href="#policy">
-          <span class="guide-number">03</span>
-
-          <span>
-            <strong>규정 안내</strong>
-            <small>계약 · 작가 · 촬영 · 셀렉 · 리터칭 · 제작</small>
-          </span>
-        </a>
-
-      </nav>
-
-    </aside>
-
-
-
-    <!-- RIGHT -->
-    <section class="guide-content">
-
-
-      <!-- ========================================
-           FLOW
-      ========================================= -->
-
-      <section
-        class="guide-section"
-        id="flow"
-      >
-
-        <div class="guide-section-title">
-          진행 일정
-          <span>FLOW</span>
+          <p class="guide-desc">
+            촬영일부터 제작물 수령까지<br>
+            약 4–5개월이 소요됩니다.
+          </p>
         </div>
 
+        <nav class="guide-index">
+          <a href="#flow" class="is-active">
+            <span class="guide-index-no">01</span>
+            <span class="guide-index-text">
+              <strong>진행 일정</strong>
+              <small>촬영 준비부터 제작물 배송까지</small>
+            </span>
+          </a>
 
-        <div class="guide-subtitle">
-          BEFORE SHOOT
-        </div>
+          <a href="#faq">
+            <span class="guide-index-no">02</span>
+            <span class="guide-index-text">
+              <strong>자주 묻는 질문</strong>
+              <small>예약 · 촬영 준비 · 촬영 후</small>
+            </span>
+          </a>
 
+          <a href="#policy">
+            <span class="guide-index-no">03</span>
+            <span class="guide-index-text">
+              <strong>규정 안내</strong>
+              <small>계약 · 작가 · 촬영 · 셀렉 · 리터칭 · 제작</small>
+            </span>
+          </a>
+        </nav>
+      </aside>
 
-        <div class="flow-list">
+      <section class="guide-right">
 
-          <div class="flow-row">
-            <span>D−30</span>
-            <strong>
-              체크리스트 · 촬영 가이드 확인, 잔금 결제
-            </strong>
+        <!-- FLOW -->
+        <section class="guide-block" id="flow">
+          <h2 class="guide-block-title">진행 일정 <span>FLOW</span></h2>
+
+          <p class="guide-subtitle">BEFORE SHOOT</p>
+
+          <div class="flow-table">
+            <div class="flow-row">
+              <div class="flow-day">D−30</div>
+              <div class="flow-text">체크리스트 · 촬영 가이드 확인, 잔금 결제</div>
+            </div>
+
+            <div class="flow-row">
+              <div class="flow-day">D−14</div>
+              <div class="flow-text">가이드 확인 및 상담</div>
+            </div>
+
+            <div class="flow-row">
+              <div class="flow-day">D−1</div>
+              <div class="flow-text">주차 및 이용 안내</div>
+            </div>
+
+            <div class="flow-row">
+              <div class="flow-day">D−DAY</div>
+              <div class="flow-text">담당 작가 미팅 · 촬영</div>
+            </div>
           </div>
 
-          <div class="flow-row">
-            <span>D−14</span>
-            <strong>
-              가이드 확인 및 상담
-            </strong>
+          <div class="guide-divider"></div>
+
+          <p class="guide-subtitle">AFTER SHOOT</p>
+
+          <div class="flow-table">
+            <div class="flow-row">
+              <div class="flow-day">+3 DAYS</div>
+              <div class="flow-text">원본 제공</div>
+            </div>
+
+            <div class="flow-row">
+              <div class="flow-day">+60 DAYS</div>
+              <div class="flow-text">수정본 · 셀렉 확정일 기준</div>
+            </div>
+
+            <div class="flow-row">
+              <div class="flow-day">+7 DAYS</div>
+              <div class="flow-text">재수정본</div>
+            </div>
+
+            <div class="flow-row">
+              <div class="flow-day">+40 DAYS</div>
+              <div class="flow-text">제작 및 배송 · 제작물 확정일 기준</div>
+            </div>
           </div>
 
-          <div class="flow-row">
-            <span>D−1</span>
-            <strong>
-              주차 및 이용 안내
-            </strong>
+          <p class="guide-small-note">
+            명절 및 법정 공휴일 포함 시 ±10일 내외 변동될 수 있습니다.
+          </p>
+        </section>
+
+        <!-- FAQ -->
+        <section class="guide-block" id="faq">
+          <h2 class="guide-block-title">자주 묻는 질문 <span>FAQ</span></h2>
+
+          <div class="faq-tabs">
+            <button class="faq-tab active" data-tab="booking">BOOKING</button>
+            <button class="faq-tab" data-tab="preparation">PREPARATION</button>
+            <button class="faq-tab" data-tab="after">SHOOT & AFTER</button>
           </div>
 
-          <div class="flow-row">
-            <span>D−DAY</span>
-            <strong>
-              담당 작가 미팅 · 촬영
-            </strong>
+          <div class="faq-panel active" data-panel="booking">
+            <div class="guide-accordion">
+              <details>
+                <summary>일정 문의나 예약은 어떻게 하나요?</summary>
+                <div class="answer">
+                  RESERVE 메뉴를 통해 카카오톡으로 문의해 주세요.
+                  희망 촬영일과 원하시는 상품을 함께 남겨주시면 확인 후 안내드립니다.
+                </div>
+              </details>
+
+              <details>
+                <summary>방문 없이 계약할 수 있나요?</summary>
+                <div class="answer">
+                  네. 상담 및 계약은 비대면으로도 진행 가능합니다.
+                </div>
+              </details>
+
+              <details>
+                <summary>계약은 어떻게 진행되나요?</summary>
+                <div class="answer">
+                  일정 확인 후 계약 안내와 계약금 결제가 완료되면 촬영 일정이 최종 확정됩니다.
+                </div>
+              </details>
+
+              <details>
+                <summary>계약금은 얼마인가요?</summary>
+                <div class="answer">
+                  계약금 및 잔금 일정은 상담 진행 시 별도로 안내드립니다.
+                </div>
+              </details>
+
+              <details>
+                <summary>촬영일 홀딩(가계약)이 가능한가요?</summary>
+                <div class="answer">
+                  가능 여부는 일정 상황에 따라 다르므로 문의 시 함께 확인해 주세요.
+                </div>
+              </details>
+            </div>
           </div>
 
-        </div>
+          <div class="faq-panel" data-panel="preparation">
+            <div class="guide-accordion">
+              <details>
+                <summary>플래너를 통한 계약과 직접 계약의 차이가 있나요?</summary>
+                <div class="answer">
+                  촬영 자체의 결과물과 기본 진행은 동일하며,
+                  계약 경로에 따라 세부 혜택이나 안내 방식이 달라질 수 있습니다.
+                </div>
+              </details>
 
+              <details>
+                <summary>제휴 플래닝 업체를 안내받을 수 있나요?</summary>
+                <div class="answer">
+                  필요하신 경우 상담 시 문의해 주세요.
+                </div>
+              </details>
 
-        <div class="guide-line"></div>
+              <details>
+                <summary>플래너 없이 예식을 준비 중인데 도움 받을 수 있나요?</summary>
+                <div class="answer">
+                  촬영에 필요한 준비 과정과 체크리스트는 DAMAH에서 안내드립니다.
+                </div>
+              </details>
 
-
-        <div class="guide-subtitle">
-          AFTER SHOOT
-        </div>
-
-
-        <div class="flow-list">
-
-          <div class="flow-row">
-            <span>+3 DAYS</span>
-            <strong>원본 제공</strong>
+              <details>
+                <summary>모바일 청첩장에 수정본을 사용하려면 언제 촬영하는 것이 좋을까요?</summary>
+                <div class="answer">
+                  원하시는 사용 시점보다 충분히 여유 있게 촬영 일정을 잡는 것을 권장드립니다.
+                </div>
+              </details>
+            </div>
           </div>
 
-          <div class="flow-row">
-            <span>+60 DAYS</span>
-            <strong>수정본 · 셀렉 확정일 기준</strong>
+          <div class="faq-panel" data-panel="after">
+            <div class="guide-accordion">
+              <details>
+                <summary>촬영 전 어떤 것을 준비해야 하나요?</summary>
+                <div class="answer">
+                  촬영 전 전달드리는 체크리스트와 촬영 가이드를 확인해 주세요.
+                </div>
+              </details>
+
+              <details>
+                <summary>촬영 원본은 언제 받을 수 있나요?</summary>
+                <div class="answer">
+                  기본적으로 촬영 후 약 3일 이내 원본이 제공됩니다.
+                </div>
+              </details>
+
+              <details>
+                <summary>사진 셀렉은 어떻게 진행하나요?</summary>
+                <div class="answer">
+                  원본 전달 후 안내드리는 방식에 따라 리터칭할 사진을 선택해 주시면 됩니다.
+                </div>
+              </details>
+
+              <details>
+                <summary>추가 리터칭도 가능한가요?</summary>
+                <div class="answer">
+                  가능합니다. 추가 비용은 PRODUCT 페이지 기준으로 안내됩니다.
+                </div>
+              </details>
+
+              <details>
+                <summary>제작물은 언제 받을 수 있나요?</summary>
+                <div class="answer">
+                  최종 이미지 확정 후 제작 기간을 거쳐 순차적으로 배송됩니다.
+                </div>
+              </details>
+            </div>
           </div>
+        </section>
 
-          <div class="flow-row">
-            <span>+7 DAYS</span>
-            <strong>재수정본</strong>
+        <!-- POLICY -->
+        <section class="guide-block" id="policy">
+          <h2 class="guide-block-title">규정 안내 <span>POLICY</span></h2>
+
+          <div class="policy-accordion">
+            <details>
+              <summary>
+                <span class="policy-cat">CONTRACT</span>
+                <span class="policy-title">계약 변경 · 취소 규정</span>
+              </summary>
+              <div class="answer">
+                계약 변경 및 취소 규정은 계약서에 기재된 내용을 기준으로 적용됩니다.
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span class="policy-cat">CONTRACT</span>
+                <span class="policy-title">작가 지정 및 배정 규정</span>
+              </summary>
+              <div class="answer">
+                작가 지정 여부 및 배정 방식은 예약하신 상품과 일정에 따라 개별 안내드립니다.
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span class="policy-cat">SHOOTING</span>
+                <span class="policy-title">촬영 및 상품 세부 안내</span>
+              </summary>
+              <div class="answer">
+                촬영 시간과 제공 내역은 PRODUCT 페이지에 안내된 내용을 기준으로 합니다.
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span class="policy-cat">SHOOTING</span>
+                <span class="policy-title">업체 및 지인 입장 안내</span>
+              </summary>
+              <div class="answer">
+                원활한 진행을 위해 외부 인원 방문 및 동행 여부는 사전 협의가 필요합니다.
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span class="policy-cat">SHOOTING</span>
+                <span class="policy-title">헬퍼 및 헤어 변형 안내</span>
+              </summary>
+              <div class="answer">
+                외부 헬퍼 및 헤어 변형 업체 동행 여부는 미리 공유해 주세요.
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span class="policy-cat">SHOOTING</span>
+                <span class="policy-title">반려견 · 들러리 동반 촬영 안내</span>
+              </summary>
+              <div class="answer">
+                반려견 및 추가 인원 동반 촬영은 사전 상담 후 진행 가능합니다.
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span class="policy-cat">AFTER SHOOT</span>
+                <span class="policy-title">셀렉(사진 선택) 안내</span>
+              </summary>
+              <div class="answer">
+                안내드린 기간 내에 셀렉을 완료해 주셔야 이후 작업이 원활하게 진행됩니다.
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span class="policy-cat">AFTER SHOOT</span>
+                <span class="policy-title">리터칭(보정) 안내</span>
+              </summary>
+              <div class="answer">
+                DAMAH의 기본 색감과 방향성을 기준으로 리터칭이 진행됩니다.
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span class="policy-cat">AFTER SHOOT</span>
+                <span class="policy-title">긴급 리터칭 서비스</span>
+              </summary>
+              <div class="answer">
+                긴급 리터칭은 별도 비용이 발생하며 작업 가능 일정에 따라 제한될 수 있습니다.
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span class="policy-cat">AFTER SHOOT</span>
+                <span class="policy-title">제작물 안내</span>
+              </summary>
+              <div class="answer">
+                앨범 및 액자 등 제작물은 최종 확정 이후 제작 및 배송이 진행됩니다.
+              </div>
+            </details>
           </div>
-
-          <div class="flow-row">
-            <span>+40 DAYS</span>
-            <strong>
-              제작 및 배송 · 제작물 확정일 기준
-            </strong>
-          </div>
-
-        </div>
-
-
-        <p class="guide-note">
-          명절 및 법정 공휴일 포함 시 ±10일 내외 변동될 수 있습니다.
-        </p>
+        </section>
 
       </section>
 
-
-
-      <!-- ========================================
-           FAQ
-      ========================================= -->
-
-      <section
-        class="guide-section"
-        id="faq"
-      >
-
-        <div class="guide-section-title">
-          자주 묻는 질문
-          <span>FAQ</span>
-        </div>
-
-
-        <div class="faq-tabs">
-          <button
-            class="faq-tab active"
-            data-category="booking"
-          >
-            BOOKING
-          </button>
-
-          <button
-            class="faq-tab"
-            data-category="preparation"
-          >
-            PREPARATION
-          </button>
-
-          <button
-            class="faq-tab"
-            data-category="after"
-          >
-            SHOOT & AFTER
-          </button>
-        </div>
-
-
-
-        <!-- BOOKING -->
-
-        <div
-          class="faq-group active"
-          data-group="booking"
-        >
-
-          <details>
-            <summary>
-              일정 문의나 예약은 어떻게 하나요?
-            </summary>
-
-            <p>
-              RESERVE 메뉴를 통해 카카오톡으로 문의해 주세요.
-              희망 촬영일과 원하는 상품을 함께 남겨주시면
-              확인 후 안내드립니다.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              방문 없이 계약할 수 있나요?
-            </summary>
-
-            <p>
-              네. 상담 및 계약은 비대면으로도 진행 가능합니다.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              계약은 어떻게 진행되나요?
-            </summary>
-
-            <p>
-              일정 확인 후 계약 안내와 계약금 결제가 완료되면
-              촬영 일정이 최종 확정됩니다.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              계약금은 얼마인가요?
-            </summary>
-
-            <p>
-              계약금 및 잔금 일정은 예약 상담 시 별도로 안내드립니다.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              촬영일 홀딩(가계약)이 가능한가요?
-            </summary>
-
-            <p>
-              계약금 입금 전 일정 홀딩 여부는 문의 시 확인해 주세요.
-            </p>
-          </details>
-
-        </div>
-
-
-
-        <!-- PREPARATION -->
-
-        <div
-          class="faq-group"
-          data-group="preparation"
-        >
-
-          <details>
-            <summary>
-              플래너를 통한 계약과 직접 계약의 차이가 있나요?
-            </summary>
-
-            <p>
-              촬영 결과물과 기본 촬영 진행에는 차이가 없습니다.
-              세부 혜택이나 구성은 계약 경로에 따라 달라질 수 있습니다.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              제휴 플래너 업체를 안내받을 수 있나요?
-            </summary>
-
-            <p>
-              필요하신 경우 상담 시 문의해 주세요.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              플래너 없이 예식을 준비 중인데 도움 받을 수 있나요?
-            </summary>
-
-            <p>
-              촬영에 필요한 준비 사항과 진행 가이드는
-              DAMAH에서 안내드립니다.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              촬영 전 어떤 것을 준비해야 하나요?
-            </summary>
-
-            <p>
-              촬영 전 전달되는 체크리스트와 가이드를 확인해 주세요.
-            </p>
-          </details>
-
-        </div>
-
-
-
-        <!-- AFTER -->
-
-        <div
-          class="faq-group"
-          data-group="after"
-        >
-
-          <details>
-            <summary>
-              촬영 원본은 언제 받을 수 있나요?
-            </summary>
-
-            <p>
-              기본적으로 촬영 후 약 3일 이내 제공됩니다.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              사진 셀렉은 어떻게 진행하나요?
-            </summary>
-
-            <p>
-              원본 전달 후 안내된 방식에 따라
-              리터칭할 사진을 선택해 주세요.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              추가 리터칭도 가능한가요?
-            </summary>
-
-            <p>
-              가능합니다. 추가 리터칭 비용은 PRODUCT 페이지에서
-              확인하실 수 있습니다.
-            </p>
-          </details>
-
-
-          <details>
-            <summary>
-              제작물은 언제 받을 수 있나요?
-            </summary>
-
-            <p>
-              앨범 및 액자 등 제작물은 최종 확정 이후
-              제작 기간을 거쳐 배송됩니다.
-            </p>
-          </details>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- ========================================
-           POLICY
-      ========================================= -->
-
-      <section
-        class="guide-section"
-        id="policy"
-      >
-
-        <div class="guide-section-title">
-          규정 안내
-          <span>POLICY</span>
-        </div>
-
-
-        <div class="policy-list">
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                CONTRACT
-              </span>
-
-              <strong>
-                계약 변경 · 취소 규정
-              </strong>
-
-            </summary>
-
-            <p>
-              계약 변경 및 취소에 관한 상세 규정은
-              계약서에 기재된 내용을 기준으로 합니다.
-            </p>
-
-          </details>
-
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                CONTRACT
-              </span>
-
-              <strong>
-                작가 지정 및 배정 규정
-              </strong>
-
-            </summary>
-
-            <p>
-              작가 지정 여부 및 배정 방식은
-              예약 상품과 일정에 따라 안내됩니다.
-            </p>
-
-          </details>
-
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                SHOOTING
-              </span>
-
-              <strong>
-                촬영 및 상품 세부 안내
-              </strong>
-
-            </summary>
-
-            <p>
-              상품별 기본 촬영 시간과 제공 내역은
-              PRODUCT 페이지를 기준으로 합니다.
-            </p>
-
-          </details>
-
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                SHOOTING
-              </span>
-
-              <strong>
-                업체 및 지인 입장 안내
-              </strong>
-
-            </summary>
-
-            <p>
-              촬영 공간의 원활한 진행을 위해
-              외부 인원 방문은 사전 협의가 필요합니다.
-            </p>
-
-          </details>
-
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                SHOOTING
-              </span>
-
-              <strong>
-                헬퍼 및 헤어 변형 안내
-              </strong>
-
-            </summary>
-
-            <p>
-              헬퍼 및 외부 헤어 변형 업체 동행 여부는
-              사전에 DAMAH와 공유해 주세요.
-            </p>
-
-          </details>
-
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                SHOOTING
-              </span>
-
-              <strong>
-                반려견 · 들러리 동반 촬영 안내
-              </strong>
-
-            </summary>
-
-            <p>
-              반려견 및 추가 인원 동반 촬영은
-              사전 상담이 필요합니다.
-            </p>
-
-          </details>
-
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                AFTER SHOOT
-              </span>
-
-              <strong>
-                셀렉(사진 선택) 안내
-              </strong>
-
-            </summary>
-
-            <p>
-              리터칭할 사진은 안내된 기간 내에
-              셀렉을 완료해 주세요.
-            </p>
-
-          </details>
-
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                AFTER SHOOT
-              </span>
-
-              <strong>
-                리터칭(보정) 안내
-              </strong>
-
-            </summary>
-
-            <p>
-              DAMAH의 기본 색감과 스타일을 기준으로
-              리터칭이 진행됩니다.
-            </p>
-
-          </details>
-
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                AFTER SHOOT
-              </span>
-
-              <strong>
-                긴급 리터칭 서비스
-              </strong>
-
-            </summary>
-
-            <p>
-              긴급 리터칭은 별도 추가 비용이 발생하며,
-              작업 가능 일정에 따라 제한될 수 있습니다.
-            </p>
-
-          </details>
-
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                AFTER SHOOT
-              </span>
-
-              <strong>
-                제작물 안내
-              </strong>
-
-            </summary>
-
-            <p>
-              앨범, 액자 및 기타 제작물은
-              최종 이미지 확정 이후 제작됩니다.
-            </p>
-
-          </details>
-
-
-        </div>
-
-      </section>
-
-    </section>
-
+    </div>
   </main>
 
-
-
-  <!-- FOOTER -->
   <footer class="business-info">
-
     <p>
       상호명 양윤호 |
       대표 양윤호 |
       개인정보관리책임자 양윤호 |
       연락처 010-7543-7353 |
       이메일
-      <a href="mailto:damah.haus@gmail.com">
-        damah.haus@gmail.com
-      </a>
+      <a href="mailto:damah.haus@gmail.com">damah.haus@gmail.com</a>
     </p>
 
     <p>
       주소 동교로27길 93-5 |
       사업자등록번호 813-06-02328
     </p>
-
   </footer>
 
-
-
-  <!-- FAQ TAB SCRIPT -->
-
   <script>
+    const guideTabs = document.querySelectorAll(".faq-tab");
+    const guidePanels = document.querySelectorAll(".faq-panel");
 
-    const tabs = document.querySelectorAll(".faq-tab");
-    const groups = document.querySelectorAll(".faq-group");
-
-    tabs.forEach(tab => {
-
+    guideTabs.forEach((tab) => {
       tab.addEventListener("click", () => {
+        const target = tab.dataset.tab;
 
-        const category = tab.dataset.category;
-
-        tabs.forEach(item => {
-          item.classList.remove("active");
-        });
-
-        groups.forEach(group => {
-          group.classList.remove("active");
-        });
+        guideTabs.forEach((item) => item.classList.remove("active"));
+        guidePanels.forEach((panel) => panel.classList.remove("active"));
 
         tab.classList.add("active");
-
-        document
-          .querySelector(`[data-group="${category}"]`)
-          .classList.add("active");
-
+        document.querySelector('.faq-panel[data-panel="' + target + '"]').classList.add("active");
       });
-
     });
-
   </script>
 
 </body>
