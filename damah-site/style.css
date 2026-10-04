@@ -493,5 +493,550 @@ a:hover {
 
     font-size: 7px;
   }
+   /* ========================================
+   GUIDE
+======================================== */
+
+.guide-page {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(260px, 32vw)
+    minmax(0, 1fr);
+
+  gap: 7vw;
+
+  padding:
+    120px
+    5vw
+    120px;
+}
+
+
+/* ========================================
+   GUIDE LEFT
+======================================== */
+
+.guide-sidebar {
+  position: sticky;
+
+  top: 110px;
+
+  align-self: start;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.5fr;
+
+  column-gap: 5vw;
+}
+
+
+.guide-sidebar-title {
+  grid-column: 1;
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+}
+
+
+.guide-sidebar-description {
+  grid-column: 1;
+
+  margin:
+    25px
+    0
+    0;
+
+  font-family: "SUIT", sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+.guide-index {
+  grid-column: 2;
+
+  grid-row:
+    1
+    / span 2;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+
+.guide-index a {
+  display: grid;
+
+  grid-template-columns:
+    24px
+    1fr;
+
+  gap: 10px;
+
+  opacity: 0.28;
+}
+
+
+.guide-index a:hover {
+  opacity: 1;
+}
+
+
+.guide-number {
+  font-size: 9px;
+
+  padding-top: 1px;
+}
+
+
+.guide-index strong {
+  display: block;
+
+  font-family: "SUIT", sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+
+.guide-index small {
+  display: block;
+
+  margin-top: 2px;
+
+  font-family: "SUIT", sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1.5;
+
+  color: rgba(0, 0, 0, 0.45);
+}
+
+
+/* ========================================
+   GUIDE RIGHT
+======================================== */
+
+.guide-content {
+  width: 100%;
+  max-width: 720px;
+
+  margin-left: auto;
+}
+
+
+.guide-section {
+  margin-bottom: 110px;
+
+  scroll-margin-top: 90px;
+}
+
+
+.guide-section-title {
+  margin-bottom: 32px;
+
+  font-family: "SUIT", sans-serif;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: -0.01em;
+}
+
+
+.guide-section-title span {
+  margin-left: 5px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-weight: 400;
+
+  color: rgba(0, 0, 0, 0.30);
+
+  letter-spacing: 0.08em;
+}
+
+
+.guide-subtitle {
+  margin-bottom: 18px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* ========================================
+   FLOW
+======================================== */
+
+.flow-list {
+  width: 100%;
+}
+
+
+.flow-row {
+  display: grid;
+
+  grid-template-columns:
+    90px
+    1fr;
+
+  gap: 10px;
+
+  margin-bottom: 16px;
+}
+
+
+.flow-row span {
+  font-size: 9px;
+
+  color: rgba(0, 0, 0, 0.45);
+}
+
+
+.flow-row strong {
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+
+.guide-line {
+  width: 100%;
+
+  height: 1px;
+
+  margin:
+    30px
+    0;
+
+  background: rgba(0, 0, 0, 0.10);
+}
+
+
+.guide-note {
+  margin:
+    24px
+    0
+    0;
+
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 8px;
+
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* ========================================
+   FAQ TABS
+======================================== */
+
+.faq-tabs {
+  display: flex;
+
+  gap: 28px;
+
+  padding-bottom: 12px;
+
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.7);
+}
+
+
+.faq-tab {
+  padding: 0;
+
+  border: 0;
+
+  background: none;
+
+  cursor: pointer;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.06em;
+
+  color: rgba(0, 0, 0, 0.25);
+}
+
+
+.faq-tab.active {
+  color: #000000;
+}
+
+
+.faq-group {
+  display: none;
+}
+
+
+.faq-group.active {
+  display: block;
+}
+
+
+/* ========================================
+   ACCORDION
+======================================== */
+
+.faq-group details,
+.policy-list details {
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.10);
+}
+
+
+.faq-group summary,
+.policy-list summary {
+  position: relative;
+
+  cursor: pointer;
+
+  list-style: none;
+
+  padding:
+    16px
+    28px
+    16px
+    0;
+
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+.faq-group summary::-webkit-details-marker,
+.policy-list summary::-webkit-details-marker {
+  display: none;
+}
+
+
+.faq-group summary::after,
+.policy-list summary::after {
+  content: "+";
+
+  position: absolute;
+
+  right: 0;
+  top: 16px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 400;
+}
+
+
+.faq-group details[open] summary::after,
+.policy-list details[open] summary::after {
+  content: "−";
+}
+
+
+.faq-group details p,
+.policy-list details p {
+  margin: 0;
+
+  padding:
+    0
+    28px
+    18px
+    0;
+
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.8;
+
+  color: rgba(0, 0, 0, 0.55);
+}
+
+
+/* ========================================
+   POLICY
+======================================== */
+
+.policy-list {
+  border-top:
+    1px solid
+    rgba(0, 0, 0, 0.7);
+}
+
+
+.policy-list summary {
+  display: grid;
+
+  grid-template-columns:
+    92px
+    1fr;
+
+  gap: 12px;
+}
+
+
+.policy-category {
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+.policy-list summary strong {
+  font-weight: 500;
+}
+
+
+/* ========================================
+   GUIDE MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+  .guide-page {
+    display: block;
+
+    padding:
+      90px
+      14px
+      70px;
+  }
+
+
+  .guide-sidebar {
+    position: static;
+
+    display: block;
+
+    margin-bottom: 80px;
+  }
+
+
+  .guide-sidebar-title {
+    font-size: 9px;
+  }
+
+
+  .guide-sidebar-description {
+    margin-top: 20px;
+
+    font-size: 10px;
+  }
+
+
+  .guide-index {
+    margin-top: 38px;
+
+    gap: 18px;
+  }
+
+
+  .guide-index a {
+    grid-template-columns:
+      22px
+      1fr;
+  }
+
+
+  .guide-content {
+    max-width: none;
+
+    margin: 0;
+  }
+
+
+  .guide-section {
+    margin-bottom: 90px;
+  }
+
+
+  .flow-row {
+    grid-template-columns:
+      72px
+      1fr;
+  }
+
+
+  .faq-tabs {
+    gap: 18px;
+
+    overflow-x: auto;
+  }
+
+
+  .faq-tab {
+    white-space: nowrap;
+
+    font-size: 8px;
+  }
+
+
+  .faq-group summary,
+  .policy-list summary {
+    font-size: 9px;
+  }
+
+
+  .policy-list summary {
+    grid-template-columns:
+      78px
+      1fr;
+  }
+
+
+  .policy-category {
+    font-size: 8px;
+  }
 
 }
