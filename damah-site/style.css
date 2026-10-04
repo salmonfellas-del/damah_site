@@ -46,7 +46,6 @@ a:hover {
 
 .site-header {
   position: fixed;
-
   top: 0;
   left: 0;
 
@@ -403,23 +402,28 @@ a:hover {
    GUIDE LEFT
 ======================================== */
 
-.guide-sidebar {
-  display: contents;
-}
-
-
-/* GUIDE TITLE + INTRO */
-
 .guide-sidebar-title {
   grid-column: 1;
+
+  position: sticky;
+  top: 110px;
+
+  align-self: start;
 
   font-size: 10px;
 
   letter-spacing: 0.08em;
+
+  z-index: 2;
 }
 
 .guide-sidebar-description {
   grid-column: 1;
+
+  position: sticky;
+  top: 148px;
+
+  align-self: start;
 
   margin:
     28px
@@ -433,10 +437,14 @@ a:hover {
   font-size: 11px;
 
   line-height: 1.8;
+
+  z-index: 2;
 }
 
 
-/* GUIDE INDEX */
+/* ========================================
+   GUIDE INDEX
+======================================== */
 
 .guide-index {
   grid-column: 2;
@@ -451,7 +459,6 @@ a:hover {
   gap: 24px;
 
   position: sticky;
-
   top: 110px;
 
   align-self: start;
@@ -511,7 +518,8 @@ a:hover {
 
   line-height: 1.5;
 
-  color: rgba(0, 0, 0, 0.45);
+  color:
+    rgba(0, 0, 0, 0.45);
 }
 
 
@@ -558,7 +566,8 @@ a:hover {
 
   font-weight: 400;
 
-  color: rgba(0, 0, 0, 0.30);
+  color:
+    rgba(0, 0, 0, 0.30);
 
   letter-spacing: 0.08em;
 }
@@ -574,7 +583,8 @@ a:hover {
 
   letter-spacing: 0.08em;
 
-  color: rgba(0, 0, 0, 0.4);
+  color:
+    rgba(0, 0, 0, 0.4);
 }
 
 
@@ -601,7 +611,8 @@ a:hover {
 .flow-row span {
   font-size: 9px;
 
-  color: rgba(0, 0, 0, 0.45);
+  color:
+    rgba(0, 0, 0, 0.45);
 }
 
 .flow-row strong {
@@ -963,8 +974,9 @@ a:hover {
       70px;
   }
 
-  .guide-sidebar {
-    display: block;
+  .guide-sidebar-title,
+  .guide-sidebar-description {
+    position: static;
   }
 
   .guide-sidebar-title {
