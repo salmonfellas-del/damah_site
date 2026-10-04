@@ -390,7 +390,7 @@ a:hover {
   margin: 0 auto;
 
   padding:
-    120px
+    90px
     clamp(28px, 4vw, 90px)
     120px;
 
@@ -406,7 +406,7 @@ a:hover {
   grid-column: 1;
 
   position: sticky;
-  top: 110px;
+  top: 90px;
 
   align-self: start;
 
@@ -421,7 +421,7 @@ a:hover {
   grid-column: 1;
 
   position: sticky;
-  top: 148px;
+  top: 90px;
 
   align-self: start;
 
@@ -459,7 +459,7 @@ a:hover {
   gap: 24px;
 
   position: sticky;
-  top: 110px;
+  top: 90px;
 
   align-self: start;
 }
