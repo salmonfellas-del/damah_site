@@ -16,41 +16,50 @@
 
 <body>
 
-<header class="site-header">
-  <nav>
-    <a href="index.html">DAMAH</a>
-    <a href="product.html">PRODUCT</a>
-    <a class="active" href="guide.html">GUIDE</a>
+  <!-- ========================================
+       HEADER
+  ========================================= -->
 
-    <a
-      href="https://pf.kakao.com/_NVESX/chat"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      RESERVE
-    </a>
+  <header class="site-header">
+    <nav>
+      <a href="index.html">DAMAH</a>
+      <a href="product.html">PRODUCT</a>
+      <a class="active" href="guide.html">GUIDE</a>
 
-  </nav>
-</header>
+      <a
+        href="https://pf.kakao.com/_NVESX/chat"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        RESERVE
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- ========================================
+       GUIDE
+  ========================================= -->
 
   <main class="guide-page">
+
 
     <!-- ========================================
          LEFT : GUIDE INTRO
     ========================================= -->
 
-<div class="guide-intro">
+    <div class="guide-intro">
 
-  <div class="guide-sidebar-title">
-    GUIDE
-  </div>
+      <div class="guide-sidebar-title">
+        GUIDE
+      </div>
 
-  <p class="guide-sidebar-description">
-    촬영일부터 제작물 수령까지<br>
-    약 3개월 소요됩니다.
-  </p>
+      <p class="guide-sidebar-description">
+        촬영일부터 제작물 수령까지<br>
+        약 3개월 소요됩니다.
+      </p>
 
-</div>
+    </div>
 
 
     <!-- ========================================
@@ -60,32 +69,50 @@
     <nav class="guide-index">
 
       <a href="#flow" class="active">
-        <span class="guide-number">01</span>
+
+        <span class="guide-number">
+          01
+        </span>
 
         <span>
           <strong>진행 일정</strong>
-          <small>촬영 준비부터 제작물 배송까지</small>
+          <small>
+            촬영 준비부터 제작물 배송까지
+          </small>
         </span>
+
       </a>
 
 
       <a href="#faq">
-        <span class="guide-number">02</span>
+
+        <span class="guide-number">
+          02
+        </span>
 
         <span>
           <strong>자주 묻는 질문</strong>
-          <small>예약 · 촬영 준비 · 촬영&결과물</small>
+          <small>
+            예약 · 촬영 준비 · 촬영&결과물
+          </small>
         </span>
+
       </a>
 
 
       <a href="#policy">
-        <span class="guide-number">03</span>
+
+        <span class="guide-number">
+          03
+        </span>
 
         <span>
           <strong>규정 안내</strong>
-          <small>계약 · 작가 · 촬영 · 셀렉 · 리터칭 · 제작</small>
+          <small>
+            계약 · 작가 · 촬영 · 셀렉 · 리터칭 · 제작
+          </small>
         </span>
+
       </a>
 
     </nav>
@@ -121,38 +148,46 @@
         <div class="flow-list">
 
           <div class="flow-row">
+
             <span>D−30</span>
 
             <strong>
               체크리스트 · 촬영 가이드 확인, 잔금 결제
             </strong>
+
           </div>
 
 
           <div class="flow-row">
+
             <span>D−14</span>
 
             <strong>
               가이드 확인 및 상담
             </strong>
+
           </div>
 
 
           <div class="flow-row">
+
             <span>D−1</span>
 
             <strong>
               주차 및 이용 안내
             </strong>
+
           </div>
 
 
           <div class="flow-row">
+
             <span>D−DAY</span>
 
             <strong>
               담당 작가 미팅 · 촬영
             </strong>
+
           </div>
 
         </div>
@@ -169,36 +204,47 @@
         <div class="flow-list">
 
           <div class="flow-row">
+
             <span>D+7</span>
 
             <strong>
               원본 제공
             </strong>
+
           </div>
 
 
           <div class="flow-row">
+
             <span>D+30</span>
 
             <strong>
               수정본 제공<br>
-            <span class="small-note">
-              셀렉 확정일에 따라 변동
-            </span>
+
+              <span class="small-note">
+                셀렉 확정일에 따라 변동
+              </span>
+
             </strong>
+
           </div>
 
 
           <div class="flow-row">
+
             <span>D+90</span>
 
             <strong>
               재수정본 제공<br>
               제작물 배송<br>
-            <span class="small-note">
-              제작물 확정일에 따라 변동
-            </span>
+
+              <span class="small-note">
+                제작물 확정일에 따라 변동
+              </span>
+
             </strong>
+
+          </div>
 
         </div>
 
@@ -226,11 +272,13 @@
         </div>
 
 
+        <!-- FAQ TABS -->
+
         <div class="faq-tabs">
 
           <button
             class="faq-tab active"
-            data-category="예약"
+            data-faq-category="예약"
           >
             예약
           </button>
@@ -238,7 +286,7 @@
 
           <button
             class="faq-tab"
-            data-category="촬영 준비"
+            data-faq-category="촬영 준비"
           >
             촬영 준비
           </button>
@@ -246,7 +294,7 @@
 
           <button
             class="faq-tab"
-            data-category="촬영&결과물"
+            data-faq-category="촬영&결과물"
           >
             촬영&결과물
           </button>
@@ -255,26 +303,31 @@
 
 
 
-        <!-- 예약 -->
+        <!-- ========================================
+             FAQ : 예약
+        ========================================= -->
 
         <div
           class="faq-group active"
-          data-group="예약"
+          data-faq-group="예약"
         >
 
           <details>
+
             <summary>
               일정 문의나 예약은 어떻게 하나요?
             </summary>
 
             <p>
-              홈페이지 상단 RESERVE를 클릭해셔서 카카오톡 채널을 통해 상담 및 예악 문의 바랍니다.<br>
-              카카오톡 채널 메뉴의 상담신청서를 작생해 보내주시면, 확인 후 안내드립니다.
+              홈페이지 상단 RESERVE를 클릭하셔서 카카오톡 채널을 통해 상담 및 예약 문의 바랍니다.<br>
+              카카오톡 채널 메뉴의 상담신청서를 작성해 보내주시면, 확인 후 안내드립니다.
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               방문 없이 계약할 수 있나요?
             </summary>
@@ -283,10 +336,12 @@
               네.<br>
               촬영을 제외한 모든 과정은 비대면으로 진행됩니다.
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               계약은 어떻게 진행되나요?
             </summary>
@@ -298,10 +353,12 @@
               4. 계약서 발송 및 예약 확정<br>
               5. 촬영 준비 안내
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               계약금은 얼마인가요?
             </summary>
@@ -310,24 +367,27 @@
               모든 상품의 계약금은 50만원 입니다.<br>
               잔금은 촬영일 약 한 달 전에 결제하며, 부가세가 포함되어 있습니다.
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               촬영일 홀딩(가계약)이 가능한가요?
             </summary>
 
             <p>
               아니요.<br>
-              가계약 및 일정 홀딩은 운영하지 않습니다.
+              가계약 및 일정 홀딩은 운영하지 않습니다.<br>
               예약은 계약금 입금 순으로 확정됩니다.
-              
             </p>
+
           </details>
 
-          
+
           <details>
+
             <summary>
               플래너를 통한 계약과 직접 계약의 차이가 있나요?
             </summary>
@@ -337,33 +397,39 @@
               DAMAH는 정찰제 및 제휴 정책을 운영하고 있어 계약 경로와
               관계없이 동일한 금액과 서비스를 제공합니다.
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               제휴 플래닝 업체를 안내받을 수 있나요?
             </summary>
 
             <p>
-             가능합니다.<br>
-             상담을 통해 DAMAH의 촬영 방향에 적합한 웨딩 플래닝
-             제휴사를 안내해 드립니다.
+              가능합니다.<br>
+              상담을 통해 DAMAH의 촬영 방향에 적합한 웨딩 플래닝
+              제휴사를 안내해 드립니다.
             </p>
+
           </details>
 
         </div>
 
 
 
-        <!-- 촬영 준비 -->
+        <!-- ========================================
+             FAQ : 촬영 준비
+        ========================================= -->
 
         <div
           class="faq-group"
-          data-group="촬영 준비"
+          data-faq-group="촬영 준비"
         >
 
           <details>
+
             <summary>
               촬영 전까지 어떤 과정을 거치나요?
             </summary>
@@ -374,24 +440,28 @@
               촬영 하루 전 | 주차 및 스튜디오 이용 안내<br>
               촬영 당일 | 담당 작가 미팅 후 촬영 진행
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               드레스와 헤어메이크업은 직접 준비해야 하나요?
             </summary>
 
             <p>
-             네.<br>
-             DAMAH는 촬영 전문 스튜디오로 드레스와 헤어메이크업은
-             별도로 준비해 주셔야 합니다.<br>
-             필요하신 경우 촬영 경험을 바탕으로 업체를 추천해 드립니다.
+              네.<br>
+              DAMAH는 촬영 전문 스튜디오로 드레스와 헤어메이크업은
+              별도로 준비해 주셔야 합니다.<br>
+              필요하신 경우 촬영 경험을 바탕으로 업체를 추천해 드립니다.
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               사진 속 꽃들은 직접 준비해야 하나요?
             </summary>
@@ -401,51 +471,59 @@
               상담을 통해 촬영 분위기에 적합한 플라워를 준비해드립니다.<br>
               구성품 외의 플라워는 문의 주시면 안내 해드립니다.
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               스튜디오에 준비되어 있는 용품은 뭐가 있나요?
             </summary>
 
             <p>
-             촬영 당일 사용 가능한 스튜디오 물품 입니다.<br>
+              촬영 당일 사용 가능한 스튜디오 물품 입니다.<br>
               - 신부/신랑용 슬리퍼<br>
               - 스팀다리미<br>
-             셀럽들도 이용하는 스튜디오인 만큼 고객을 위한 편의성들이 갖춰져 있는 스튜디오입니다.<br>
-             *별도의 사진 안내는 제공하지 않습니다.
+              셀럽들도 이용하는 스튜디오인 만큼 고객을 위한 편의성들이 갖춰져 있는 스튜디오입니다.<br>
+              *별도의 사진 안내는 제공하지 않습니다.
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               촬영 관련 상담은 언제 진행되나요?
             </summary>
 
             <p>
-             촬영 상담은 카카오톡 채널을 통해 언제든 문의하실 수
+              촬영 상담은 카카오톡 채널을 통해 언제든 문의하실 수
               있습니다.<br>
-             촬영 한 달 전 준비사항 안내와 함께 촬영 가이드를
-             보내드립니다.<br>
-             작성해 주신 내용을 담당 매니저가 확인하여 필요한 사항을
-             사전에 조율합니다.
+              촬영 한 달 전 준비사항 안내와 함께 촬영 가이드를
+              보내드립니다.<br>
+              작성해 주신 내용을 담당 매니저가 확인하여 필요한 사항을
+              사전에 조율합니다.
             </p>
+
           </details>
 
         </div>
 
 
 
-        <!-- 촬영&결과물 -->
+        <!-- ========================================
+             FAQ : 촬영&결과물
+        ========================================= -->
 
         <div
           class="faq-group"
-          data-group="촬영&결과물"
+          data-faq-group="촬영&결과물"
         >
 
           <details>
+
             <summary>
               촬영은 어떻게 진행되나요?
             </summary>
@@ -457,10 +535,12 @@
               세심하게 디렉팅 드립니다.<br>
               DAMAH는 높은 결과물과 편안한 촬영을 위해 항상 노력하고 있습니다.
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               저희가 원하는 연출이 가능한가요?
             </summary>
@@ -471,36 +551,42 @@
               있는 작가로 구성되어있습니다.<br>
               원하시는 시안이 있다면 CUSTOM 상품으로 문의 주시기 바랍니다.
             </p>
+
           </details>
 
-          
+
           <details>
+
             <summary>
               원본과 수정본은 언제 받을 수 있나요?
             </summary>
 
             <p>
               - 원본 : 촬영 후 7일 이내<br>
-              - 수정본 : 셀렉 확정 후 약 2개월 이내<br>
+              - 수정본 : 셀렉 확정 후 약 2개월 이내
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               촬영 후 진행 과정과 기간은 어떻게 되나요?
             </summary>
 
             <p>
               원본 전달 → 셀렉 접수 → 수정본 작업 → 재수정
-              → 앨범·액자 제작 및 수령 순으로 진행됩니다.
-             전체 일정은 촬영일 기준 평균 3~4개월이며,
-             셀렉 시점 및 재수정 여부에 따라 달라질 수 있습니다.
+              → 앨범·액자 제작 및 수령 순으로 진행됩니다.<br>
+              전체 일정은 촬영일 기준 평균 3~4개월이며,
+              셀렉 시점 및 재수정 여부에 따라 달라질 수 있습니다.
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               RAW 파일도 제공되나요?
             </summary>
@@ -511,10 +597,12 @@
               이는 저작권 보호와 작업 데이터 관리 정책에 따라 모든 계약
               및 내외부에 동일하게 적용됩니다.
             </p>
+
           </details>
 
 
           <details>
+
             <summary>
               수정본 일부를 먼저 받을 수 있나요?
             </summary>
@@ -524,8 +612,8 @@
               일정이 급한 경우 유료 긴급 리터칭 서비스를 이용하실 수
               있습니다.<br>
               - 5장 기준 10만 원, 작업 기간 10일 이내
-        
             </p>
+
           </details>
 
         </div>
@@ -549,278 +637,369 @@
         </div>
 
 
-        <div class="policy-list">
-
-
-          <details>
-
-            <summary>
-
-              <span class="policy-category">
-                CONTRACT
-              </span>
-
-              <strong>
-                계약 변경 · 취소 규정
-              </strong>
 
-            </summary>
+        <!-- ========================================
+             POLICY TABS
+        ========================================= -->
 
-            <p>
-정찰제 운영 기준<br>
-CUSTOM상품을 제외한 모든 촬영 상품은 부가세 포함 정찰제로 운영됩니다.<br>
-모든 상품에는 고화질 원본 및 수정본이 포함됩니다.<br>
-웹 드라이브 셀렉 방식으로 진행됩니다.<br>
-<br>
-계약 진행 절차<br>
-1. 카카오톡 상담 신청서 제출 및 상담 진행<br>
-2. 촬영 일자, 상품, 견적, 약관 확인 및 동의<br>
-3. 계약금 50만 원 입금 후 계약 확정<br>
-4. 계약 후 안내사항 전달<br>
-<br> 
-계약 변경<br>
-- 계약금 입금일 기준 30일 이내 1회 변경 가능합니다.<br>
-- 단, 희망 일정으로 변경이 어려울 수 있습니다.<br>
-<br>
-계약 취소 및 계약금 환불<br>
-(계약금 입금일 기준)<br>
-<br>
-- 7일 이내: 계약금 전액 환불<br>
-- 8일 ~ 28일 이내: 계약금의 50% 환불<br>
-- 29일 이후: 계약금 환불 불가<br>
-<br>    
-위약금 적용 기준<br>
-위약금 발생 시에는 계약금 환불 규정보다 위약금 규정이 우선 적용됩니다.<br>
-<br>
-위약금은 총 계약 금액 기준으로 산정되며, 계약금은 반환되지 않습니다.<br>
-<br>
-잔금 미입금 시에도 촬영 취소로 간주되어 동일 기준이 적용됩니다.<br>
-<br>
-이용자 귀책 사유 취소 위약금<br>
-고객의 귀책 사유로 계약이 해제·해지될 경우, 촬영일 기준 60일 이내에는 대체 계약이 어려워 실질적 손해가 발생합니다.<br>
-<br>
-이에 따라 아래 기준의 위약금이 적용됩니다.<br>
-<br>
-취소 시점별 위약금 기준<br>
-(촬영일 기준)
-<br>
-- 60일 전까지: 총 계약 금액의 30%<br>
-- 59일 ~ 45일 전: 총 계약 금액의 40%<br>
-- 44일 ~ 30일 전: 총 계약 금액의 55%<br>
-- 29일 ~ 14일 전: 총 계약 금액의 70%<br>
-- 13일 ~ 7일 전: 총 계약 금액의 85%<br>
-<br>      
-계약 양도<br>
-계약 양도는 불가합니다.<br>
-            </p>
+        <div class="faq-tabs">
 
-          </details>
+          <button
+            class="faq-tab policy-tab active"
+            data-policy-category="계약"
+          >
+            계약
+          </button>
 
 
+          <button
+            class="faq-tab policy-tab"
+            data-policy-category="촬영"
+          >
+            촬영
+          </button>
 
-          <details>
 
-            <summary>
+          <button
+            class="faq-tab policy-tab"
+            data-policy-category="촬영 후"
+          >
+            촬영 후
+          </button>
 
-              <span class="policy-category">
-                CONTRACT
-              </span>
+        </div>
 
-              <strong>
-                작가 지정 및 배정 규정
-              </strong>
 
-            </summary>
 
-            <p>
-              DAMAH는 작가 지정이 없습니다.<br>
-            </p>
+        <!-- ========================================
+             POLICY : 계약
+        ========================================= -->
 
-          </details>
+        <div
+          class="faq-group policy-group active"
+          data-policy-group="계약"
+        >
 
+          <div class="policy-list">
 
 
-          <details>
+            <details>
 
-            <summary>
+              <summary>
 
-              <span class="policy-category">
-                SHOOTING
-              </span>
+                <span class="policy-category">
+                  CONTRACT
+                </span>
 
-              <strong>
-                촬영 및 상품 세부 안내
-              </strong>
+                <strong>
+                  계약 변경 · 취소 규정
+                </strong>
 
-            </summary>
+              </summary>
 
-            <p>
-              촬영 시간과 제공 내역은 PRODUCT 페이지에 안내된 내용을 기준으로 합니다.
-            </p>
+              <p>
+                정찰제 운영 기준<br>
+                CUSTOM상품을 제외한 모든 촬영 상품은 부가세 포함 정찰제로 운영됩니다.<br>
+                모든 상품에는 고화질 원본 및 수정본이 포함됩니다.<br>
+                웹 드라이브 셀렉 방식으로 진행됩니다.<br>
+                <br>
 
-          </details>
+                계약 진행 절차<br>
+                1. 카카오톡 상담 신청서 제출 및 상담 진행<br>
+                2. 촬영 일자, 상품, 견적, 약관 확인 및 동의<br>
+                3. 계약금 50만 원 입금 후 계약 확정<br>
+                4. 계약 후 안내사항 전달<br>
+                <br>
 
+                계약 변경<br>
+                - 계약금 입금일 기준 30일 이내 1회 변경 가능합니다.<br>
+                - 단, 희망 일정으로 변경이 어려울 수 있습니다.<br>
+                <br>
 
+                계약 취소 및 계약금 환불<br>
+                (계약금 입금일 기준)<br>
+                <br>
 
-          <details>
+                - 7일 이내: 계약금 전액 환불<br>
+                - 8일 ~ 28일 이내: 계약금의 50% 환불<br>
+                - 29일 이후: 계약금 환불 불가<br>
+                <br>
 
-            <summary>
+                위약금 적용 기준<br>
+                위약금 발생 시에는 계약금 환불 규정보다 위약금 규정이 우선 적용됩니다.<br>
+                <br>
 
-              <span class="policy-category">
-                SHOOTING
-              </span>
+                위약금은 총 계약 금액 기준으로 산정되며, 계약금은 반환되지 않습니다.<br>
+                <br>
 
-              <strong>
-                업체 및 지인 입장 안내
-              </strong>
+                잔금 미입금 시에도 촬영 취소로 간주되어 동일 기준이 적용됩니다.<br>
+                <br>
 
-            </summary>
+                이용자 귀책 사유 취소 위약금<br>
+                고객의 귀책 사유로 계약이 해제·해지될 경우, 촬영일 기준 60일 이내에는 대체 계약이 어려워 실질적 손해가 발생합니다.<br>
+                <br>
 
-            <p>
-              원활한 진행을 위해 외부 인원 방문 및 동행 여부는
-              사전 협의가 필요합니다.
-            </p>
+                이에 따라 아래 기준의 위약금이 적용됩니다.<br>
+                <br>
 
-          </details>
+                취소 시점별 위약금 기준<br>
+                (촬영일 기준)<br>
+                <br>
 
+                - 60일 전까지: 총 계약 금액의 30%<br>
+                - 59일 ~ 45일 전: 총 계약 금액의 40%<br>
+                - 44일 ~ 30일 전: 총 계약 금액의 55%<br>
+                - 29일 ~ 14일 전: 총 계약 금액의 70%<br>
+                - 13일 ~ 7일 전: 총 계약 금액의 85%<br>
+                <br>
 
+                계약 양도<br>
+                계약 양도는 불가합니다.
+              </p>
 
-          <details>
+            </details>
 
-            <summary>
 
-              <span class="policy-category">
-                SHOOTING
-              </span>
 
-              <strong>
-                헬퍼 및 헤어 변형 안내
-              </strong>
+            <details>
 
-            </summary>
+              <summary>
 
-            <p>
-              외부 헬퍼 및 헤어 변형 업체 동행 여부는
-              미리 공유해 주세요.
-            </p>
+                <span class="policy-category">
+                  CONTRACT
+                </span>
 
-          </details>
+                <strong>
+                  작가 지정 및 배정 규정
+                </strong>
 
+              </summary>
 
+              <p>
+                DAMAH는 작가 지정이 없습니다.
+              </p>
 
-          <details>
+            </details>
 
-            <summary>
 
-              <span class="policy-category">
-                SHOOTING
-              </span>
+          </div>
 
-              <strong>
-                반려견 · 들러리 동반 촬영 안내
-              </strong>
+        </div>
 
-            </summary>
 
-            <p>
-              반려견 및 추가 인원 동반 촬영은
-              사전 상담 후 진행 가능합니다.
-            </p>
 
-          </details>
+        <!-- ========================================
+             POLICY : 촬영
+        ========================================= -->
 
+        <div
+          class="faq-group policy-group"
+          data-policy-group="촬영"
+        >
 
+          <div class="policy-list">
 
-          <details>
 
-            <summary>
+            <details>
 
-              <span class="policy-category">
-                AFTER SHOOT
-              </span>
+              <summary>
 
-              <strong>
-                셀렉(사진 선택) 안내
-              </strong>
+                <span class="policy-category">
+                  SHOOTING
+                </span>
 
-            </summary>
+                <strong>
+                  촬영 및 상품 세부 안내
+                </strong>
 
-            <p>
-              안내드린 기간 내에 셀렉을 완료해 주셔야
-              이후 작업이 원활하게 진행됩니다.
-            </p>
+              </summary>
 
-          </details>
+              <p>
+                촬영 시간과 제공 내역은 PRODUCT 페이지에 안내된 내용을 기준으로 합니다.
+              </p>
 
+            </details>
 
 
-          <details>
 
-            <summary>
+            <details>
 
-              <span class="policy-category">
-                AFTER SHOOT
-              </span>
+              <summary>
 
-              <strong>
-                리터칭(보정) 안내
-              </strong>
+                <span class="policy-category">
+                  SHOOTING
+                </span>
 
-            </summary>
+                <strong>
+                  업체 및 지인 입장 안내
+                </strong>
 
-            <p>
-              DAMAH의 기본 색감과 방향성을 기준으로
-              리터칭이 진행됩니다.
-            </p>
+              </summary>
 
-          </details>
+              <p>
+                원활한 진행을 위해 외부 인원 방문 및 동행 여부는
+                사전 협의가 필요합니다.
+              </p>
 
+            </details>
 
 
-          <details>
 
-            <summary>
+            <details>
 
-              <span class="policy-category">
-                AFTER SHOOT
-              </span>
+              <summary>
 
-              <strong>
-                긴급 리터칭 서비스
-              </strong>
+                <span class="policy-category">
+                  SHOOTING
+                </span>
 
-            </summary>
+                <strong>
+                  헬퍼 및 헤어 변형 안내
+                </strong>
 
-            <p>
-              긴급 리터칭은 별도 비용이 발생하며
-              작업 가능 일정에 따라 제한될 수 있습니다.
-            </p>
+              </summary>
 
-          </details>
+              <p>
+                외부 헬퍼 및 헤어 변형 업체 동행 여부는
+                미리 공유해 주세요.
+              </p>
 
+            </details>
 
 
-          <details>
 
-            <summary>
+            <details>
 
-              <span class="policy-category">
-                AFTER SHOOT
-              </span>
+              <summary>
 
-              <strong>
-                제작물 안내
-              </strong>
+                <span class="policy-category">
+                  SHOOTING
+                </span>
 
-            </summary>
+                <strong>
+                  반려견 · 들러리 동반 촬영 안내
+                </strong>
 
-            <p>
-              앨범 및 액자 등 제작물은
-              최종 확정 이후 제작 및 배송이 진행됩니다.
-            </p>
+              </summary>
 
-          </details>
+              <p>
+                반려견 및 추가 인원 동반 촬영은
+                사전 상담 후 진행 가능합니다.
+              </p>
 
+            </details>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ========================================
+             POLICY : 촬영 후
+        ========================================= -->
+
+        <div
+          class="faq-group policy-group"
+          data-policy-group="촬영 후"
+        >
+
+          <div class="policy-list">
+
+
+            <details>
+
+              <summary>
+
+                <span class="policy-category">
+                  AFTER SHOOT
+                </span>
+
+                <strong>
+                  셀렉(사진 선택) 안내
+                </strong>
+
+              </summary>
+
+              <p>
+                안내드린 기간 내에 셀렉을 완료해 주셔야
+                이후 작업이 원활하게 진행됩니다.
+              </p>
+
+            </details>
+
+
+
+            <details>
+
+              <summary>
+
+                <span class="policy-category">
+                  AFTER SHOOT
+                </span>
+
+                <strong>
+                  리터칭(보정) 안내
+                </strong>
+
+              </summary>
+
+              <p>
+                DAMAH의 기본 색감과 방향성을 기준으로
+                리터칭이 진행됩니다.
+              </p>
+
+            </details>
+
+
+
+            <details>
+
+              <summary>
+
+                <span class="policy-category">
+                  AFTER SHOOT
+                </span>
+
+                <strong>
+                  긴급 리터칭 서비스
+                </strong>
+
+              </summary>
+
+              <p>
+                긴급 리터칭은 별도 비용이 발생하며
+                작업 가능 일정에 따라 제한될 수 있습니다.
+              </p>
+
+            </details>
+
+
+
+            <details>
+
+              <summary>
+
+                <span class="policy-category">
+                  AFTER SHOOT
+                </span>
+
+                <strong>
+                  제작물 안내
+                </strong>
+
+              </summary>
+
+              <p>
+                앨범 및 액자 등 제작물은
+                최종 확정 이후 제작 및 배송이 진행됩니다.
+              </p>
+
+            </details>
+
+
+          </div>
 
         </div>
 
@@ -844,9 +1023,11 @@ CUSTOM상품을 제외한 모든 촬영 상품은 부가세 포함 정찰제로 
       개인정보관리책임자 양윤호 |
       연락처 010-7543-7353 |
       이메일
+
       <a href="mailto:damah.haus@gmail.com">
         damah.haus@gmail.com
       </a>
+
     </p>
 
     <p>
@@ -864,9 +1045,9 @@ CUSTOM상품을 제외한 모든 촬영 상품은 부가세 포함 정찰제로 
 
   <script>
 
-    /* ----------------------------------------
+    /* ========================================
        GUIDE INDEX ACTIVE
-    ---------------------------------------- */
+    ========================================= */
 
     const guideLinks =
       document.querySelectorAll(".guide-index a");
@@ -874,8 +1055,6 @@ CUSTOM상품을 제외한 모든 촬영 상품은 부가세 포함 정찰제로 
     const guideSections =
       document.querySelectorAll(".guide-section");
 
-
-    /* 클릭 시 바로 활성화 */
 
     guideLinks.forEach((link) => {
 
@@ -892,7 +1071,6 @@ CUSTOM상품을 제외한 모든 촬영 상품은 부가세 포함 정찰제로 
     });
 
 
-    /* 스크롤 위치에 따라 자동 활성화 */
 
     const sectionObserver =
       new IntersectionObserver(
@@ -906,12 +1084,15 @@ CUSTOM상품을 제외한 모든 촬영 상품은 부가세 포함 정찰제로 
               const currentId =
                 entry.target.getAttribute("id");
 
+
               guideLinks.forEach((link) => {
 
                 link.classList.remove("active");
 
+
                 const target =
                   link.getAttribute("href");
+
 
                 if (target === "#" + currentId) {
                   link.classList.add("active");
@@ -943,15 +1124,22 @@ CUSTOM상품을 제외한 모든 촬영 상품은 부가세 포함 정찰제로 
 
 
 
-    /* ----------------------------------------
+    /* ========================================
        FAQ TABS
-    ---------------------------------------- */
+    ========================================= */
+
+    const faqSection =
+      document.querySelector("#faq");
 
     const faqTabs =
-      document.querySelectorAll(".faq-tab");
+      faqSection.querySelectorAll(
+        ".faq-tab"
+      );
 
     const faqGroups =
-      document.querySelectorAll(".faq-group");
+      faqSection.querySelectorAll(
+        "[data-faq-group]"
+      );
 
 
     faqTabs.forEach((tab) => {
@@ -959,7 +1147,7 @@ CUSTOM상품을 제외한 모든 촬영 상품은 부가세 포함 정찰제로 
       tab.addEventListener("click", () => {
 
         const category =
-          tab.dataset.category;
+          tab.dataset.faqCategory;
 
 
         faqTabs.forEach((item) => {
@@ -976,8 +1164,63 @@ CUSTOM상품을 제외한 모든 촬영 상품은 부가세 포함 정찰제로 
 
 
         const targetGroup =
-          document.querySelector(
-            `[data-group="${category}"]`
+          faqSection.querySelector(
+            `[data-faq-group="${category}"]`
+          );
+
+
+        if (targetGroup) {
+          targetGroup.classList.add("active");
+        }
+
+      });
+
+    });
+
+
+
+    /* ========================================
+       POLICY TABS
+    ========================================= */
+
+    const policySection =
+      document.querySelector("#policy");
+
+    const policyTabs =
+      policySection.querySelectorAll(
+        ".policy-tab"
+      );
+
+    const policyGroups =
+      policySection.querySelectorAll(
+        "[data-policy-group]"
+      );
+
+
+    policyTabs.forEach((tab) => {
+
+      tab.addEventListener("click", () => {
+
+        const category =
+          tab.dataset.policyCategory;
+
+
+        policyTabs.forEach((item) => {
+          item.classList.remove("active");
+        });
+
+
+        policyGroups.forEach((group) => {
+          group.classList.remove("active");
+        });
+
+
+        tab.classList.add("active");
+
+
+        const targetGroup =
+          policySection.querySelector(
+            `[data-policy-group="${category}"]`
           );
 
 
