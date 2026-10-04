@@ -91,7 +91,6 @@ a:hover {
 
 .home-page {
   width: 100%;
-
   min-height: 100vh;
 
   padding:
@@ -185,7 +184,6 @@ a:hover {
 
 .info-label {
   font-size: 9px;
-
   letter-spacing: 0.04em;
 }
 
@@ -203,7 +201,7 @@ a:hover {
 
 
 /* ========================================
-   ABOUT
+   PRODUCT / ABOUT
 ======================================== */
 
 .about-page {
@@ -373,10 +371,479 @@ a:hover {
 
 
 /* ========================================
+   GUIDE
+======================================== */
+
+.guide-page {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 0.8fr)
+    minmax(220px, 1fr)
+    minmax(420px, 2.2fr);
+
+  gap: clamp(32px, 4vw, 80px);
+
+  max-width: 1800px;
+
+  margin: 0 auto;
+
+  padding:
+    120px
+    clamp(28px, 4vw, 90px)
+    120px;
+
+  align-items: start;
+}
+
+
+/* ========================================
+   GUIDE LEFT
+======================================== */
+
+.guide-sidebar {
+  display: contents;
+}
+
+
+/* GUIDE TITLE + INTRO */
+
+.guide-sidebar-title {
+  grid-column: 1;
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+}
+
+.guide-sidebar-description {
+  grid-column: 1;
+
+  margin:
+    28px
+    0
+    0;
+
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+/* GUIDE INDEX */
+
+.guide-index {
+  grid-column: 2;
+
+  grid-row:
+    1
+    / span 2;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+
+  position: sticky;
+
+  top: 110px;
+
+  align-self: start;
+}
+
+.guide-index a {
+  display: grid;
+
+  grid-template-columns:
+    26px
+    1fr;
+
+  gap: 10px;
+
+  opacity: 0.28;
+
+  transition: opacity 0.2s ease;
+}
+
+.guide-index a:hover {
+  opacity: 1;
+}
+
+.guide-index a.active {
+  opacity: 1;
+}
+
+.guide-number {
+  font-size: 9px;
+
+  padding-top: 1px;
+}
+
+.guide-index strong {
+  display: block;
+
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+.guide-index small {
+  display: block;
+
+  margin-top: 2px;
+
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1.5;
+
+  color: rgba(0, 0, 0, 0.45);
+}
+
+
+/* ========================================
+   GUIDE RIGHT
+======================================== */
+
+.guide-content {
+  grid-column: 3;
+
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+}
+
+.guide-section {
+  width: 100%;
+
+  margin-bottom: 120px;
+
+  scroll-margin-top: 90px;
+}
+
+.guide-section-title {
+  margin-bottom: 32px;
+
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: -0.01em;
+}
+
+.guide-section-title span {
+  margin-left: 5px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-weight: 400;
+
+  color: rgba(0, 0, 0, 0.30);
+
+  letter-spacing: 0.08em;
+}
+
+.guide-subtitle {
+  margin-bottom: 18px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* ========================================
+   FLOW
+======================================== */
+
+.flow-list {
+  width: 100%;
+}
+
+.flow-row {
+  display: grid;
+
+  grid-template-columns:
+    90px
+    1fr;
+
+  gap: 14px;
+
+  margin-bottom: 16px;
+}
+
+.flow-row span {
+  font-size: 9px;
+
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.flow-row strong {
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.guide-line {
+  width: 100%;
+
+  height: 1px;
+
+  margin:
+    30px
+    0;
+
+  background:
+    rgba(0, 0, 0, 0.10);
+}
+
+.guide-note {
+  margin:
+    24px
+    0
+    0;
+
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1.7;
+
+  color:
+    rgba(0, 0, 0, 0.4);
+}
+
+
+/* ========================================
+   FAQ TABS
+======================================== */
+
+.faq-tabs {
+  display: flex;
+
+  gap: 28px;
+
+  padding-bottom: 12px;
+
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.7);
+}
+
+.faq-tab {
+  padding: 0;
+
+  border: 0;
+
+  background: none;
+
+  cursor: pointer;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.06em;
+
+  color:
+    rgba(0, 0, 0, 0.25);
+}
+
+.faq-tab.active {
+  color: #000000;
+}
+
+.faq-group {
+  display: none;
+}
+
+.faq-group.active {
+  display: block;
+}
+
+
+/* ========================================
+   ACCORDION
+======================================== */
+
+.faq-group details,
+.policy-list details {
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.10);
+}
+
+.faq-group summary,
+.policy-list summary {
+  position: relative;
+
+  cursor: pointer;
+
+  list-style: none;
+
+  padding:
+    16px
+    28px
+    16px
+    0;
+
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+.faq-group summary::-webkit-details-marker,
+.policy-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-group summary::after,
+.policy-list summary::after {
+  content: "+";
+
+  position: absolute;
+
+  right: 0;
+  top: 16px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 400;
+}
+
+.faq-group details[open] summary::after,
+.policy-list details[open] summary::after {
+  content: "−";
+}
+
+.faq-group details p,
+.policy-list details p {
+  margin: 0;
+
+  padding:
+    0
+    28px
+    18px
+    0;
+
+  font-family:
+    "SUIT",
+    sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.8;
+
+  color:
+    rgba(0, 0, 0, 0.55);
+}
+
+
+/* ========================================
+   POLICY
+======================================== */
+
+.policy-list {
+  border-top:
+    1px solid
+    rgba(0, 0, 0, 0.7);
+}
+
+.policy-list summary {
+  display: grid;
+
+  grid-template-columns:
+    100px
+    1fr;
+
+  gap: 14px;
+}
+
+.policy-category {
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
+
+  color:
+    rgba(0, 0, 0, 0.4);
+}
+
+.policy-list summary strong {
+  font-weight: 500;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+
+  .guide-page {
+    grid-template-columns:
+      minmax(150px, 0.8fr)
+      minmax(180px, 1fr)
+      minmax(340px, 2fr);
+
+    gap: 30px;
+
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+}
+
+
+/* ========================================
    MOBILE
 ======================================== */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
   /* HEADER */
 
@@ -387,7 +854,7 @@ a:hover {
   }
 
   .site-header nav {
-    gap: 20px;
+    gap: 18px;
   }
 
   .site-header nav a {
@@ -439,7 +906,7 @@ a:hover {
   }
 
 
-  /* ABOUT */
+  /* PRODUCT */
 
   .about-page {
     padding:
@@ -462,7 +929,7 @@ a:hover {
   }
 
   .about-content h1 {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   .about-content h2 {
@@ -483,6 +950,93 @@ a:hover {
   }
 
 
+  /* GUIDE */
+
+  .guide-page {
+    display: block;
+
+    max-width: none;
+
+    padding:
+      90px
+      14px
+      70px;
+  }
+
+  .guide-sidebar {
+    display: block;
+  }
+
+  .guide-sidebar-title {
+    font-size: 9px;
+  }
+
+  .guide-sidebar-description {
+    margin-top: 20px;
+
+    font-size: 10px;
+  }
+
+  .guide-index {
+    position: static;
+
+    margin-top: 38px;
+
+    gap: 18px;
+  }
+
+  .guide-index a {
+    grid-template-columns:
+      22px
+      1fr;
+  }
+
+  .guide-content {
+    width: 100%;
+
+    margin-top: 80px;
+  }
+
+  .guide-section {
+    margin-bottom: 90px;
+  }
+
+  .flow-row {
+    grid-template-columns:
+      72px
+      1fr;
+  }
+
+  .faq-tabs {
+    gap: 18px;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+  }
+
+  .faq-tab {
+    white-space: nowrap;
+
+    font-size: 8px;
+  }
+
+  .faq-group summary,
+  .policy-list summary {
+    font-size: 9px;
+  }
+
+  .policy-list summary {
+    grid-template-columns:
+      78px
+      1fr;
+  }
+
+  .policy-category {
+    font-size: 8px;
+  }
+
+
   /* FOOTER */
 
   .business-info {
@@ -492,551 +1046,6 @@ a:hover {
       20px;
 
     font-size: 7px;
-  }
-   /* ========================================
-   GUIDE
-======================================== */
-
-.guide-page {
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns:
-    minmax(260px, 32vw)
-    minmax(0, 1fr);
-
-  gap: 7vw;
-
-  padding:
-    120px
-    5vw
-    120px;
-}
-
-
-/* ========================================
-   GUIDE LEFT
-======================================== */
-
-.guide-sidebar {
-  position: sticky;
-
-  top: 110px;
-
-  align-self: start;
-
-  display: grid;
-
-  grid-template-columns:
-    1fr
-    1.5fr;
-
-  column-gap: 5vw;
-}
-
-
-.guide-sidebar-title {
-  grid-column: 1;
-
-  font-size: 10px;
-
-  letter-spacing: 0.08em;
-}
-
-
-.guide-sidebar-description {
-  grid-column: 1;
-
-  margin:
-    25px
-    0
-    0;
-
-  font-family: "SUIT", sans-serif;
-
-  font-size: 11px;
-
-  line-height: 1.8;
-}
-
-
-.guide-index {
-  grid-column: 2;
-
-  grid-row:
-    1
-    / span 2;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 22px;
-}
-
-
-.guide-index a {
-  display: grid;
-
-  grid-template-columns:
-    24px
-    1fr;
-
-  gap: 10px;
-
-  opacity: 0.28;
-}
-
-
-.guide-index a:hover {
-  opacity: 1;
-}
-
-
-.guide-number {
-  font-size: 9px;
-
-  padding-top: 1px;
-}
-
-
-.guide-index strong {
-  display: block;
-
-  font-family: "SUIT", sans-serif;
-
-  font-size: 10px;
-  font-weight: 500;
-
-  line-height: 1.5;
-}
-
-
-.guide-index small {
-  display: block;
-
-  margin-top: 2px;
-
-  font-family: "SUIT", sans-serif;
-
-  font-size: 8px;
-
-  line-height: 1.5;
-
-  color: rgba(0, 0, 0, 0.45);
-}
-
-
-/* ========================================
-   GUIDE RIGHT
-======================================== */
-
-.guide-content {
-  width: 100%;
-  max-width: 720px;
-
-  margin-left: auto;
-}
-
-
-.guide-section {
-  margin-bottom: 110px;
-
-  scroll-margin-top: 90px;
-}
-
-
-.guide-section-title {
-  margin-bottom: 32px;
-
-  font-family: "SUIT", sans-serif;
-
-  font-size: 11px;
-  font-weight: 500;
-
-  letter-spacing: -0.01em;
-}
-
-
-.guide-section-title span {
-  margin-left: 5px;
-
-  font-family:
-    Arial,
-    sans-serif;
-
-  font-weight: 400;
-
-  color: rgba(0, 0, 0, 0.30);
-
-  letter-spacing: 0.08em;
-}
-
-
-.guide-subtitle {
-  margin-bottom: 18px;
-
-  font-family:
-    Arial,
-    sans-serif;
-
-  font-size: 9px;
-
-  letter-spacing: 0.08em;
-
-  color: rgba(0, 0, 0, 0.4);
-}
-
-
-/* ========================================
-   FLOW
-======================================== */
-
-.flow-list {
-  width: 100%;
-}
-
-
-.flow-row {
-  display: grid;
-
-  grid-template-columns:
-    90px
-    1fr;
-
-  gap: 10px;
-
-  margin-bottom: 16px;
-}
-
-
-.flow-row span {
-  font-size: 9px;
-
-  color: rgba(0, 0, 0, 0.45);
-}
-
-
-.flow-row strong {
-  font-family:
-    "SUIT",
-    sans-serif;
-
-  font-size: 10px;
-  font-weight: 500;
-}
-
-
-.guide-line {
-  width: 100%;
-
-  height: 1px;
-
-  margin:
-    30px
-    0;
-
-  background: rgba(0, 0, 0, 0.10);
-}
-
-
-.guide-note {
-  margin:
-    24px
-    0
-    0;
-
-  font-family:
-    "SUIT",
-    sans-serif;
-
-  font-size: 8px;
-
-  color: rgba(0, 0, 0, 0.4);
-}
-
-
-/* ========================================
-   FAQ TABS
-======================================== */
-
-.faq-tabs {
-  display: flex;
-
-  gap: 28px;
-
-  padding-bottom: 12px;
-
-  border-bottom:
-    1px solid
-    rgba(0, 0, 0, 0.7);
-}
-
-
-.faq-tab {
-  padding: 0;
-
-  border: 0;
-
-  background: none;
-
-  cursor: pointer;
-
-  font-family:
-    Arial,
-    sans-serif;
-
-  font-size: 9px;
-
-  letter-spacing: 0.06em;
-
-  color: rgba(0, 0, 0, 0.25);
-}
-
-
-.faq-tab.active {
-  color: #000000;
-}
-
-
-.faq-group {
-  display: none;
-}
-
-
-.faq-group.active {
-  display: block;
-}
-
-
-/* ========================================
-   ACCORDION
-======================================== */
-
-.faq-group details,
-.policy-list details {
-  border-bottom:
-    1px solid
-    rgba(0, 0, 0, 0.10);
-}
-
-
-.faq-group summary,
-.policy-list summary {
-  position: relative;
-
-  cursor: pointer;
-
-  list-style: none;
-
-  padding:
-    16px
-    28px
-    16px
-    0;
-
-  font-family:
-    "SUIT",
-    sans-serif;
-
-  font-size: 10px;
-
-  line-height: 1.6;
-}
-
-
-.faq-group summary::-webkit-details-marker,
-.policy-list summary::-webkit-details-marker {
-  display: none;
-}
-
-
-.faq-group summary::after,
-.policy-list summary::after {
-  content: "+";
-
-  position: absolute;
-
-  right: 0;
-  top: 16px;
-
-  font-family:
-    Arial,
-    sans-serif;
-
-  font-size: 10px;
-
-  font-weight: 400;
-}
-
-
-.faq-group details[open] summary::after,
-.policy-list details[open] summary::after {
-  content: "−";
-}
-
-
-.faq-group details p,
-.policy-list details p {
-  margin: 0;
-
-  padding:
-    0
-    28px
-    18px
-    0;
-
-  font-family:
-    "SUIT",
-    sans-serif;
-
-  font-size: 9px;
-
-  line-height: 1.8;
-
-  color: rgba(0, 0, 0, 0.55);
-}
-
-
-/* ========================================
-   POLICY
-======================================== */
-
-.policy-list {
-  border-top:
-    1px solid
-    rgba(0, 0, 0, 0.7);
-}
-
-
-.policy-list summary {
-  display: grid;
-
-  grid-template-columns:
-    92px
-    1fr;
-
-  gap: 12px;
-}
-
-
-.policy-category {
-  font-family:
-    Arial,
-    sans-serif;
-
-  font-size: 9px;
-
-  letter-spacing: 0.08em;
-
-  color: rgba(0, 0, 0, 0.4);
-}
-
-
-.policy-list summary strong {
-  font-weight: 500;
-}
-
-
-/* ========================================
-   GUIDE MOBILE
-======================================== */
-
-@media (max-width: 800px) {
-
-  .guide-page {
-    display: block;
-
-    padding:
-      90px
-      14px
-      70px;
-  }
-
-
-  .guide-sidebar {
-    position: static;
-
-    display: block;
-
-    margin-bottom: 80px;
-  }
-
-
-  .guide-sidebar-title {
-    font-size: 9px;
-  }
-
-
-  .guide-sidebar-description {
-    margin-top: 20px;
-
-    font-size: 10px;
-  }
-
-
-  .guide-index {
-    margin-top: 38px;
-
-    gap: 18px;
-  }
-
-
-  .guide-index a {
-    grid-template-columns:
-      22px
-      1fr;
-  }
-
-
-  .guide-content {
-    max-width: none;
-
-    margin: 0;
-  }
-
-
-  .guide-section {
-    margin-bottom: 90px;
-  }
-
-
-  .flow-row {
-    grid-template-columns:
-      72px
-      1fr;
-  }
-
-
-  .faq-tabs {
-    gap: 18px;
-
-    overflow-x: auto;
-  }
-
-
-  .faq-tab {
-    white-space: nowrap;
-
-    font-size: 8px;
-  }
-
-
-  .faq-group summary,
-  .policy-list summary {
-    font-size: 9px;
-  }
-
-
-  .policy-list summary {
-    grid-template-columns:
-      78px
-      1fr;
-  }
-
-
-  .policy-category {
-    font-size: 8px;
   }
 
 }
